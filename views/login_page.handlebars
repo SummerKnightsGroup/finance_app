@@ -1,0 +1,61 @@
+{{! landing page - login }}
+<div class="container mt-4">
+  <div class="card text-center">
+    <div class="card-header">
+      login page
+    </div>
+    <div class="card-body">
+      <form action="/auth/login" method="POST">
+        <div class="mb-3">
+          {{! <label for="username" class="form-label">📛 username</label> }}
+          {{! <div id="emailHelp" class="form-text"> 🐝 creative </div> }}
+          {{! <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+              /> }}
+
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">email</label>
+          <input type="email" class="form-control" id="email" name="email" />
+          {{! <div id="emailHelp" class="form-text">We'll never share your email
+                with anyone else.</div> }}
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+          />
+        </div>
+        {{! <div class="mb-3">
+              <label for="password" class="form-label">confirm password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password_confirm"
+                name="password_confirm"
+              />
+            </div> }}
+        {{! <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+              />
+
+              <label class="form-check-label" for="exampleCheck1">by checking
+                this boxy box i agree to all the terms that i'll never read...</label>
+            </div> }}
+        <button type="submit" class="btn btn-primary">login</button>
+      </form>
+    </div>
+  </div>
+  {{#if message}}
+    <h4 class="alert alert-danger mt-4">{{message}}</h4>
+  {{/if}}
+</div>
